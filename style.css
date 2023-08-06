@@ -53,3 +53,9 @@ body {
     font-size: 15px;
     font-family: inherit;
 }
+
+.result {
+    text-align: center;
+    color:rgb(174, 11, 11);
+    margin-bottom: 5px;
+}
