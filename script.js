@@ -4,12 +4,14 @@ const playerEl = document.querySelector('.playerChoice'),
       resultEl = document.querySelector('.result'),
       rockEl = document.querySelector('.rock'),
       paperEl = document.querySelector('.paper'),
-      scissorEl = document.querySelector('.scissor');
-
+      scissorEl = document.querySelector('.scissor'),
+      buttonsEl = document.querySelectorAll('.button');
 
 // array of choices
 const choices = ['rock','paper','scissor'];
 
+
+/*
 
 // adding event listener
 rockEl.addEventListener('click', () => {
@@ -31,10 +33,24 @@ scissorEl.addEventListener('click',() => {
     displayResult(scissor,computer);
 });
 
+*/
 
-function randomNumber(){
+/* function randomNumber(){
     let randomNumber= Math.floor((Math.random()*3));
     return randomNumber;
+} */
+
+// better way of doing it
+buttonsEl.forEach(button => button.addEventListener('click',() => {
+     const player = button.innerText.toLowerCase();
+     const computer = computerChoice();
+     displayResult(player,computer);
+}))
+
+
+function computerChoice(){
+    const randomValue = Math.floor(Math.random() * 3);
+    return choices[randomValue];
 }
 
 function displayResult(value1,value2){
