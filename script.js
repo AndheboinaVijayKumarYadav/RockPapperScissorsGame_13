@@ -54,8 +54,8 @@ function computerChoice(){
 }
 
 function displayResult(value1,value2){
-    playerEl.innerText = value1;
-    computerEl.innerText = value2;
+    playerEl.innerText = value1.toUpperCase();
+    computerEl.innerText = value2.toUpperCase();
 
     if((value1 === 'rock' && value2 === 'paper') || (value1 === 'paper' && value2 === 'scissor') || (value1 === 'scissor' && value2 === 'rock')){
         resultEl.innerText = "Loose"
