@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Borel&family=Overpass:wght@300;400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Borel', cursive;
+    font-family: 'Overpass', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+
+}
+.main {
+    width: 400px;
+    background-color: antiquewhite;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+}
+
+.player ,.computer{
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.player {
+    gap: 68px;
+    color: rgb(74, 74, 131);
+}
+
+.computer {
+    gap: 20px;
+    color: rgb(174, 77, 77)
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.button {
+    cursor: pointer;
+    flex: 1;
+    padding: 5px;
+    font-size: 15px;
+    font-family: inherit;
+}
